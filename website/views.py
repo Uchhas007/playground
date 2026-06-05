@@ -25,21 +25,13 @@ def home():
     return render_template("home.html", user=user)
 
 
-# @views.route("/resume")
-# def resume():
-#     r = Resume.query.all()
-#     cert = Certificates.query.all()
-#     user = UserProfile.query.first_or_404()
-#     cv = CV.query.order_by(CV.sno.desc()).first()
-#     return render_template("resume.html", user=user, r=r, c=cert, cv=cv)
-
 @views.route("/resume")
 def resume():
     r = Resume.query.all()
     cert = Certificates.query.all()
     user = UserProfile.query.first_or_404()
     cv = CV.query.order_by(CV.sno.desc()).first()
-    return render_template("resume.html", user=user, r=r, cert=cert, cv=cv)
+    return render_template("resume.html", user=user, r=r, c=cert, cv=cv)
 
 @views.route("/services")
 def services():
