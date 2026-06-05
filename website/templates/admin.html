@@ -1,0 +1,89 @@
+{% extends 'adminlayout.html' %} {% block body %}
+
+<div class="container mt-5" style="text-align: right">
+  <style>
+    @keyframes marqueeAlt {
+      0% {
+        transform: translateX(-20px);
+      }
+      50% {
+        transform: translateX(20px);
+      }
+      100% {
+        transform: translateX(-20px);
+      }
+    }
+
+    @keyframes neonGlow {
+      0% {
+        box-shadow: 0 0 10px #ff007f;
+      }
+      50% {
+        box-shadow: 0 0 20px #00ffff;
+      }
+      100% {
+        box-shadow: 0 0 10px #ff007f;
+      }
+    }
+  </style>
+
+  <hr style="border: 3px dashed #ff007f; margin: 40px 0" />
+
+  <h2
+    style="
+      font-family: &quot;Press Start 2P&quot;, cursive;
+      font-size: 2.5rem;
+      color: #00ffff;
+    "
+  >
+    📺 USELESS 80s STATS
+  </h2>
+
+  <ul style="list-style: none; padding: 0; font-size: 1.25rem; color: #00ffff">
+    <li>
+      🍕 Pizzas Ordered:
+      <strong
+        >{{ stats.pizzas if stats and stats.pizzas is defined else '999+'
+        }}</strong
+      >
+    </li>
+    <li>💾 Floppies Fried: <strong>3.14 (Pi Remix)</strong></li>
+    <li>🧠 Brain Cells Left: <strong>404 Not Found</strong></li>
+    <li>🌈 Unicorns Zapped: <strong>Monday Neon Only</strong></li>
+    <li>👾 Bugs in Code: <strong>Everywhere 😅</strong></li>
+  </ul>
+
+  <hr style="border: 3px dotted #00ffff; margin: 50px 0" />
+
+  <h2
+    style="
+      font-family: &quot;Press Start 2P&quot;, cursive;
+      font-size: 2rem;
+      color: #00ffff;
+    "
+  >
+    😂 DAILY RETRO GAGS
+  </h2>
+
+  <blockquote
+    style="
+      background: rgba(255, 0, 127, 0.3);
+      padding: 20px;
+      border-radius: 10px;
+      color: #00ffff;
+      animation: neonGlow 2s infinite;
+    "
+  >
+    Why do Java devs wear shades?<br />
+    Cause they can’t C#! 🕶️
+  </blockquote>
+
+  <hr style="border: 3px dashed #ff007f; margin: 60px 0" />
+
+  <footer style="margin-top: 80px; font-size: 0.9rem; color: #00ffff">
+    <p>📼 Powered by Uchh-ass, Memes, and Neon Grit ™️</p>
+    <p>© 2025 Dashboard from the VHS Void</p>
+  </footer>
+</div>
+
+{% endblock %}
